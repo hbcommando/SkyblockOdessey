@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "skyblockodessey",
+  "version": "${version}",
+  "name": "SkyblockOdessey",
+  "description": "modern hsb mod made for gamers",
+  "authors": [],
+  "contact": {},
+  "license": "GPL-3.0",
+  "icon": "assets/skyblockodessey/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "io.github.hbcommando.skyblockodessey.client.SkyblockodesseyClient"
+    ],
+    "main": [
+      "io.github.hbcommando.skyblockodessey.Skyblockodessey"
+    ]
+  },
+  "mixins": [
+    "skyblockodessey.mixins.json",
+    {
+      "config": "skyblockodessey.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
